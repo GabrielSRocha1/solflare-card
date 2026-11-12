@@ -6,6 +6,8 @@
 <title>Verum Wallet Freeport + Cartão Solflare</title>
 <meta name="description" content="O cartão Solflare integrado à Verum Wallet Freeport: autocustódia, liquidez em dólar na Solana e pagamentos via Apple Pay e Google Pay.">
 <meta name="theme-color" content="#050505">
+<link rel="icon" type="image/png" sizes="256x256" href="media/favicon.png">
+<link rel="apple-touch-icon" href="media/icone-128.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
@@ -99,6 +101,8 @@ header.top{
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
 .brand-name{font-family:var(--display);font-weight:800;font-size:1.02rem;letter-spacing:.14em;line-height:1.05}
 .brand-name small{display:block;font-family:var(--head);font-size:.58rem;letter-spacing:.42em;color:var(--muted);-webkit-text-fill-color:var(--muted)}
+/* FREEPORT justificado de ponta a ponta sob "VERUM WALLET" */
+.top .brand-name small{letter-spacing:0;text-align:justify;text-align-last:justify}
 nav.links{display:flex;gap:26px}
 nav.links a{color:var(--muted);text-decoration:none;font-size:.86rem;font-weight:500;transition:color .2s}
 nav.links a:hover{color:var(--gold-2)}
@@ -339,14 +343,22 @@ footer{padding:46px 0 60px;border-top:1px solid rgba(232,196,104,.14);background
       <path d="M32 9.5 51.5 16.6V30c0 12.1-8 21.2-19.5 25-11.5-3.8-19.5-12.9-19.5-25V16.6L32 9.5Z" fill="none" stroke="url(#g-gold)" stroke-width=".8" opacity=".55"/>
       <path d="M18 20h7.6L32 38.5 38.4 20H46L35.2 47h-6.4L18 20Z" fill="url(#g-gold)"/>
     </symbol>
+    <!-- Emblema com o ícone (V dourado) recortado no formato do escudo + borda por cima -->
+    <clipPath id="shield-clip"><path d="M32 3 57 12v18c0 15.5-10.6 26.6-25 31C17.6 56.6 7 45.5 7 30V12L32 3Z"/></clipPath>
+    <symbol id="emblem-icon" viewBox="0 0 64 64">
+      <path d="M32 3 57 12v18c0 15.5-10.6 26.6-25 31C17.6 56.6 7 45.5 7 30V12L32 3Z" fill="#0b0a08"/>
+      <image href="media/icone-128.png" x="10" y="8" width="44" height="44" preserveAspectRatio="xMidYMid meet" clip-path="url(#shield-clip)"/>
+      <path d="M32 3 57 12v18c0 15.5-10.6 26.6-25 31C17.6 56.6 7 45.5 7 30V12L32 3Z" fill="none" stroke="url(#g-gold-h)" stroke-width="2.4"/>
+      <path d="M32 9.5 51.5 16.6V30c0 12.1-8 21.2-19.5 25-11.5-3.8-19.5-12.9-19.5-25V16.6L32 9.5Z" fill="none" stroke="url(#g-gold)" stroke-width=".8" opacity=".55"/>
+    </symbol>
   </defs>
 </svg>
 
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#topo" aria-label="Verum Wallet Freeport — início">
-      <svg width="40" height="40"><use href="#emblem"/></svg>
-      <span class="brand-name gold-text">VERUM WALLET<small>FREEPORT</small></span>
+      <svg width="40" height="40"><use href="#emblem-icon"/></svg>
+      <span class="brand-name gold-text">VERUM WALLET<small aria-label="Freeport">F R E E P O R T</small></span>
     </a>
     <nav class="links" aria-label="Navegação principal">
       <a href="#cartao">O Cartão</a>
@@ -366,7 +378,7 @@ footer{padding:46px 0 60px;border-top:1px solid rgba(232,196,104,.14);background
   <div class="wrap hero-grid">
     <div class="reveal">
       <div class="hero-logo">
-        <svg width="74" height="74" role="img" aria-label="Emblema Verum Wallet"><use href="#emblem"/></svg>
+        <svg width="74" height="74" role="img" aria-label="Emblema Verum Wallet"><use href="#emblem-icon"/></svg>
         <span class="eyebrow">Verum Wallet Freeport · Solana</span>
       </div>
       <h1 class="gold-text"><span class="thin">O Cartão Solflare</span>Agora integrado à Verum Wallet</h1>
