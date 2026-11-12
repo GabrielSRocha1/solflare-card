@@ -103,10 +103,20 @@ nav.links{display:flex;gap:26px}
 nav.links a{color:var(--muted);text-decoration:none;font-size:.86rem;font-weight:500;transition:color .2s}
 nav.links a:hover{color:var(--gold-2)}
 @media(max-width:860px){nav.links{display:none}}
+/* Rótulo curto do CTA do header em telas estreitas (o texto completo não cabe) */
+.cta-head .cta-mini{display:none}
+@media(max-width:620px){
+  .cta-head .cta-full{display:none}
+  .cta-head .cta-mini{display:inline}
+}
 @media(max-width:520px){
   .top .brand svg{width:32px;height:32px}
   .brand-name{font-size:.8rem;letter-spacing:.1em}
   .top .btn-sm{--pad:9px 13px;font-size:.64rem;letter-spacing:.05em;white-space:nowrap}
+}
+@media(max-width:380px){
+  .brand-name{font-size:.72rem;letter-spacing:.06em}
+  .top .btn-sm{--pad:9px 11px;font-size:.6rem}
 }
 /* ---------- Botões ---------- */
 .btn{
@@ -345,7 +355,7 @@ footer{padding:46px 0 60px;border-top:1px solid rgba(232,196,104,.14);background
       <a href="#recursos">Soberania</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="btn btn-gold btn-sm" href="https://play.google.com/store/apps/details?id=com.solflare.mobile" target="_blank" rel="noopener">Adquira seu Cartão Global Solana</a>
+    <a class="btn btn-gold btn-sm cta-head" href="https://play.google.com/store/apps/details?id=com.solflare.mobile" target="_blank" rel="noopener"><span class="cta-full">Adquira seu Cartão Global Solana</span><span class="cta-mini">Adquira o Cartão</span></a>
   </div>
 </header>
 
@@ -394,7 +404,7 @@ footer{padding:46px 0 60px;border-top:1px solid rgba(232,196,104,.14);background
       <div class="layer-list">
         <div class="layer">
           <span class="tag">Cartão</span>
-          <div><h4>Solflare — o plástico no seu bolso</h4><p>O cartão físico é Solflare: a peça que você apresenta no caixa, na maquininha ou na carteira digital do celular.</p></div>
+          <div><h4>Solflare — o dinheiro no seu bolso</h4><p>O cartão físico é Solflare: a peça que você apresenta no caixa, na maquininha ou na carteira digital do celular.</p></div>
         </div>
         <div class="layer">
           <span class="tag">Cérebro</span>
@@ -426,7 +436,7 @@ footer{padding:46px 0 60px;border-top:1px solid rgba(232,196,104,.14);background
         <div class="flow-arrow"></div>
         <div class="flow-step">
           <div class="flow-ico"><svg viewBox="0 0 24 24" fill="none" stroke="url(#g-gold)" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg></div>
-          <div><strong>Pagamento aprovado no lojista</strong><span>Em qualquer lugar do mundo que aceite pagamento por aproximação.</span></div>
+          <div><strong>Pagamento aprovado no lojista</strong><span>Em qualquer lugar do mundo que aceite pagamento por aproximação e Bandeira VISA.</span></div>
         </div>
       </div>
     </div>
